@@ -1,3 +1,6 @@
+/* @tailwind components;
+@tailwind utilities; */
+
 .App {
   text-align: center;
 }
@@ -35,4 +38,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.decorator-underline::after {
+  content: '';
+  /* @apply block absolute w-7 h-1 rounded-lg bg-blue-500 !important; */
+  @apply block absolute w-7 h-1 rounded-lg bg-blue-500 !important;
 }

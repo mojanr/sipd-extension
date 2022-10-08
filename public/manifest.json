@@ -1,25 +1,28 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
+  "name": "SIPD CRAWLER",
+  "version": "1.0.0",
+  "description": "Browser extension untuk crawling data pada aplikasi SIPD",
+  "manifest_version": 3,
+  "short_name": "SIPD CRAWLER",
+  "author": "Mochammad Fauzan Rizqulloh, S.Kom",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "SIPD CRAWLER"
+  },
+  "content_scripts": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "all_frames": true,
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "ContentScript.js"
+      ]
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "permissions": [
+    "activeTab"
+  ]
 }

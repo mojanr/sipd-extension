@@ -4,8 +4,6 @@ Extension untuk web browser google chrome untuk crawling/scrapping data dari hal
 
 ## INSTALASI
 
-In the project directory, you can run:
-
 1. Download extension [Download](https://github.com/mojanr/sipd-extension/releases/download/release/sipd-crawler-chrome-ext.zip)
 2. Buka web browser google chrome
 3. Masuk ke extension manager
@@ -25,3 +23,16 @@ In the project directory, you can run:
 </div>
 
 5. Pilih folder extension yang telah didownload
+
+
+## PENGGUNAAN
+
+1. Buka halaman cetak RKA SIPD
+2. Klik extension
+3. Klik tombol tarik data
+
+<div style="text-align: center;">
+
+![Alt text](./readme/how-to-use.png)
+
+</div>

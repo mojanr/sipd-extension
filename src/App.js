@@ -24,7 +24,8 @@ function App() {
       chrome.runtime.onMessage.addListener(
         function (request, sender, sendResponse) {
           if (request.action === 'sendBody') {
-            console.log(request.data)
+            console.log(request)
+            // console.log(request.data)
           }
         }
       );
@@ -32,7 +33,7 @@ function App() {
       chrome.tabs.sendMessage(tabs[0].id, {
         action: "getBody"
       }, function (response) {
-        // console.log(response);
+        console.log(response);
         var $ = cheerio.load(response.data)
 
         // crawling
@@ -272,29 +273,29 @@ function App() {
   //     // console.log($(item).find('td:eq(0)').text())
   // })
   // console.log(data)
-  if (!info?.program && !isPrintPage) {
-    return (
-      <div className='w-80 pb-5'>
-        <PageHeader
-          ghost={true}
-          title={<Typography.Title className='decorator-underline' level={2}> SIPD CRAWLER </Typography.Title>}
-        />
-        <div className='w-full flex flex-1 flex-col justify-center items-center px-3'>
-          <Empty
-            image="./image/empty.svg"
-            imageStyle={{
-              height: 60,
-            }}
-            description={
-              <span className='font-semibold'>
-                Mohon untuk masuk ke halaman cetak RKA terlebih dahulu
-              </span>
-            }
-          />
-        </div>
-      </div>
-    )
-  }
+  // if (!isPrintPage) {
+  //   return (
+  //     <div className='w-80 pb-5'>
+  //       <PageHeader
+  //         ghost={true}
+  //         title={<Typography.Title className='decorator-underline' level={2}> SIPD CRAWLER </Typography.Title>}
+  //       />
+  //       <div className='w-full flex flex-1 flex-col justify-center items-center px-3'>
+  //         <Empty
+  //           image="./image/empty.svg"
+  //           imageStyle={{
+  //             height: 60,
+  //           }}
+  //           description={
+  //             <span className='font-semibold'>
+  //               Mohon untuk masuk ke halaman cetak RKA terlebih dahulu
+  //             </span>
+  //           }
+  //         />
+  //       </div>
+  //     </div>
+  //   )
+  // }
 
 
   return (

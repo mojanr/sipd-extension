@@ -4,7 +4,7 @@ Extension untuk web browser google chrome untuk crawling/scrapping data dari hal
 
 ## INSTALASI
 
-1. Download extension [Download](https://github.com/mojanr/sipd-extension/releases/download/release/sipd-crawler-chrome-ext.zip)
+1. Download extension [Download](https://github.com/mojanr/sipd-extension/releases/download/release/sipd-extension.zip)
 2. Buka web browser google chrome
 3. Masuk ke extension manager
 
